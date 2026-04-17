@@ -4,6 +4,16 @@ what's up gang? back again with another craaazy project!
 
 I'm sure you don't really care how it works, so here's how to get it up and running:
 
+## For testing (to see if it actually works):
+
+Run from the project directory:
+
+```sh
+scripts/local-setup.sh
+```
+
+This should have it up and running if you go to http://localhost:80, and let you see how the app works.
+
 ## 1. Buy a domain (cloudflare is nice) + buy an UBUNTU server (ideally with a public ipv4 address)
 
 think amazon EC2 or azure something or other
@@ -15,7 +25,7 @@ think amazon EC2 or azure something or other
 Simply clone this project, and then run (FROM THE PROJECT DIRECTORY (the directory you cloned the repo into))
 
 ```sh
-scripts/init.sh
+scripts/prod-setup.sh
 ```
 
 ## 4. Wow! You're done!
