@@ -40,24 +40,3 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-1: cd tslam │
-│ 2: npm run dev -- --open │
-│ │
-│ To close the dev server, hit Ctrl-C │
-│ │
-│ 🧩 Add-on steps │
-│ │
-│ playwright: │
-│ - Run npx playwright install to download browsers │
-│ - Visit /demo/playwright to see the demo page │
-│ - Run npm run test:e2e to execute the example tests │
-│ drizzle: │
-│ - Run npm run db:start to start the docker container │
-│ - Run npm run db:push to update your database schema │
-│ better-auth: │
-│ - Run npm run auth:schema to generate the auth schema │
-│ - Run npm run db:push to update your database │
-│ - Check ORIGIN & BETTER_AUTH_SECRET in .env and adjust it to your needs │
-│ - Set your GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET in .env │
-│ - Visit /demo/better-auth route to view the demo
