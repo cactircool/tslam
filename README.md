@@ -40,6 +40,20 @@ sudo systemctl status tslam
 sudo journalctl -xeu tslam # to see logs if something goes horribly wrong
 ```
 
+## Slack workspace setup:
+
+This website follows an admin + member workflow where an admin creates a "workspace" and members can join that workspace to see all the snapshots. The admin can take snapshots/set an interval in which the snapshots should take place.
+
+For the snapshots to work correctly, the website will ask the admin for a bot token. The admin needs to invite a bot into all the channels they want in the archives:
+
+```
+/invite @<BOT_NAME>
+```
+
+Keep in mind this bot will need read access to channels (and files and ims, depends on what all you want archived). No other information is really needed.
+
+For members to join a workspace, you just have to search up the admin's username under the `Find & Join` tab, from which you can choose which of that admin's workspaces you want to join. Then the admin can accept or deny that request.
+
 ## Disclaimer!
 
 All UI is very blatantly AI slop + a decent amount of logic is cuz I got lazy having to jump through boilerplate hoops so I just told it what to do and it did it. I know exactly how everything works tho, trust!
