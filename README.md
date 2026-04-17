@@ -1,42 +1,35 @@
-# sv
+# tslam
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+what's up gang? back again with another craaazy project!
 
-## Creating a project
+I'm sure you don't really care how it works, so here's how to get it up and running:
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 1. Buy a domain (cloudflare is nice) + buy an UBUNTU server (ideally with a public ipv4 address)
 
-```sh
-# create a new project
-npx sv create my-app
-```
+think amazon EC2 or azure something or other
 
-To recreate this project with the same configuration:
+## 2. Route your domain to the server through an A DNS Certificate
 
-```sh
-# recreate this project
-npx sv@0.14.1 create --template minimal --types ts --add prettier eslint playwright tailwindcss="plugins:none" sveltekit-adapter="adapter:auto" drizzle="database:postgresql+postgresql:postgres.js+docker:yes" better-auth="demo:password,github" --install npm tslam
-```
+## 3. Now you're ready for me to do all the heavy lifting:
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Simply clone this project, and then run (FROM THE PROJECT DIRECTORY (the directory you cloned the repo into))
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+scripts/init.sh
 ```
 
-## Building
+## 4. Wow! You're done!
 
-To create a production version of your app:
+Your service is running under the name `tslam` and can be modified through systemd or systemctl. Some useful commands include:
 
 ```sh
-npm run build
+sudo systemctl stop tslam
+sudo systemctl start tslam
+sudo systemctl restart tslam
+sudo systemctl status tslam
+sudo journalctl -xeu tslam # to see logs if something goes horribly wrong
 ```
 
-You can preview the production build with `npm run preview`.
+## Disclaimer!
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+All UI is very blatantly AI slop + a decent amount of logic is cuz I got lazy having to jump through boilerplate hoops so I just told it what to do and it did it. I know exactly how everything works tho, trust!
